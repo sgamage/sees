@@ -1,6 +1,4 @@
-<h3>
-	DEMO: STUDENT DETAILS SHOULD COME HERE
-</h3>
+<%= render :partial => 'students/studentdetails', :locals => {:student => @student} %>
 <%= form_for(@feedback) do |f| %>
   <div class="field">
     <%= f.hidden_field :student_id, :value => @student.try(:id) %>
