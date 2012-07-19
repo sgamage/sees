@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   # GET /comments.json
   def index
     @comments = Comment.all
+    @student = Student.find(params[:id])
   end
 
   # GET /comments/1

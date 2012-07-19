@@ -28,6 +28,7 @@ class Student < ActiveRecord::Base
   
   has_many :student_files
   has_one :feedback
+  has_one :student_status
   
   scope :submitted_applications, lambda {
     {:conditions => {:completed => true}}

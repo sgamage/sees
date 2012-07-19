@@ -11,12 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718163928) do
+ActiveRecord::Schema.define(:version => 20120719090712) do
 
   create_table "answers", :force => true do |t|
     t.string   "answer_text"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "application_statuses", :force => true do |t|
+    t.string   "status"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "application_support_statuses", :force => true do |t|
@@ -109,11 +115,12 @@ ActiveRecord::Schema.define(:version => 20120718163928) do
     t.string   "note2"
     t.string   "note3"
     t.boolean  "declaration1"
-    t.boolean  "completed",     :default => false
+    t.boolean  "completed",             :default => false
     t.integer  "user_id"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
-    t.integer  "acceptance",    :default => 0
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
+    t.integer  "acceptance",            :default => 0
+    t.integer  "application_status_id"
   end
 
   create_table "users", :force => true do |t|
