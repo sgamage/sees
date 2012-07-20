@@ -2,7 +2,8 @@ class HomeController < ApplicationController
   before_filter :handle_student_login
   
   def index
-    @students = Student.submitted_applications
+    @students = Student.all
+    #@students = Student.submitted_applications
   end
   
   def handle_student_login

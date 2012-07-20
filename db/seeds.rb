@@ -53,7 +53,27 @@ Answer.create(:answer_text => 'Agree')
 Answer.create(:answer_text => 'Uncertain')
 Answer.create(:answer_text => ' Disagree')
 Answer.create(:answer_text => 'strongly disagree')
-Answer.create(:answer_text => 'Not Applicable')
+#Answer.create(:answer_text => 'Not Applicable')
+
+#Adding the Application status
+ApplicationStatus.create(:status => 'Application Received')
+ApplicationStatus.create(:status => 'Principal Application Received')
+ApplicationStatus.create(:status => 'Short Listed Applicant')
+ApplicationStatus.create(:status => 'Selected for Conditional Offer')
+ApplicationStatus.create(:status => 'Applicant Accepts Conditional Offer')
+ApplicationStatus.create(:status => 'ATAR')
+ApplicationStatus.create(:status => 'Course UAC Requirement Number')
+ApplicationStatus.create(:status => 'Subject Requirement met')
+ApplicationStatus.create(:status => 'Financial Status Requirement Met')
+ApplicationStatus.create(:status => 'Applying for L-SEC School or EAS')
+ApplicationStatus.create(:status => 'Formal Offer')
+ApplicationStatus.create(:status => 'Applicant Enrolled')
+
+
+
+
+
+
 
 
 

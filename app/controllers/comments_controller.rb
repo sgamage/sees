@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
     @student = Student.find(params[:id])
+    @statuses = ApplicationStatus.all
   end
 
   # GET /comments/1/edit

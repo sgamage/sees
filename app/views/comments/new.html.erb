@@ -5,8 +5,8 @@
 	STATUS UPDATE
 </h3>
 <li>
-          <label>Status <em>*</em></label>
-          
+          <label>Status <em>*</em></label>          
+          <%= collection_select(:applicationstatus, :id, ApplicationStatus.all, :id, :status) %>
         </li>
 
 <%= form_for(@comment) do |f| %>
